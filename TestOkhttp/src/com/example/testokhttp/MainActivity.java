@@ -57,8 +57,8 @@ public class MainActivity extends Activity {
 			}
 
 			@Override
-			public void onResponse(Response arg0){
-				Log.v("tt", "onResponse: " + arg0.body().toString());
+			public void onResponse(Response arg0) throws IOException{
+				Log.v("tt", "onResponse: " + arg0.body().string());
 			}
 		});
 
@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onResponse(Response paramResponse) throws IOException {
 				// TODO Auto-generated method stub
-				Log.v("tt", "onResponse: " + paramResponse.body().toString());
+				Log.v("tt", "onResponse: " + paramResponse.body().string());
 			}
 		});
 	}
